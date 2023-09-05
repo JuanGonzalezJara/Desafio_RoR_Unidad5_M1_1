@@ -1,2 +1,29 @@
-<h1>Home#Index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <h1>Bienvenido a este Portafolio</h1>
+</div>
+<div class="row">
+  <p>Aqui podras encontrar algunos proyectos desarrollados en Ruby y otros aplicando MVC con Rails!</p>
+  <figure>
+    <%= image_tag "ROR_Logo.png", alt: "Logo_Rails" %>
+  </figure>
+</div>
+<div class="container text-center">
+  <div class="row g-2">
+    <div class="col-6">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "Proyectos.png", alt: "Proyectos" class:"" %>
+        <div class="card-header">
+          Proyectos
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "Contacto.png", alt: "Contacto" class:""  %>
+        <div class="card-header">
+          Contacto
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DesafioRorUnidad5M11</title>
+    <title>Desafio_RoR_Unidad5_M1_1</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%# CDN de Bootstrap - CSS %>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <%# NavBar %>
+    <nav class="navbar bg-body-tertiary mx-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Rails Challenges</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse mt-2" id="navbarNav">
           <ul class="navbar-nav">
+            <li class="nav-item">
+              <%= link_to "Home", root_path %>
+            </li>
             <li class="nav-item">
               <%= link_to "Projects", home_projects_path %>
             </li>
@@ -28,7 +32,18 @@
         </div>
       </div>
     </nav>
-    <%= yield %>
+    <%# Content %>
+    <div class="container mx-3">
+      <%= yield %>
+    </div>
+    <footer>
+      <div class="card mx-3 mt-5">
+        <div class="card-body">
+          <p class="card-text text-center">Copyright © 2023 - Todos los derechos y los izquierdos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <%# CDN de Bootstrap - JS %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
