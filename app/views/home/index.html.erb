@@ -7,22 +7,26 @@
     <%= image_tag "ROR_Logo.png", alt: "Logo_Rails" %>
   </figure>
 </div>
-<div class="container text-center">
-  <div class="row g-2">
+<div class="container text-center mt-4">
+  <div class="row">
     <div class="col-6">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "Proyectos.png", alt: "Proyectos" class:"" %>
+      <div class="card" ">
         <div class="card-header">
           Proyectos
         </div>
+        <%= link_to(home_projects_path) do %>
+          <%= image_tag("Proyectos.png", alt: "Proyectos", class:"img_resize") %>
+        <% end %>
       </div>
     </div>
     <div class="col-6">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "Contacto.png", alt: "Contacto" class:""  %>
+      <div class="card" ">
         <div class="card-header">
           Contacto
         </div>
+        <%= link_to(home_contact_path) do %>
+          <%= image_tag("Contacto.png", alt: "Contacto", class:"img_resize") %>
+        <% end %>
       </div>
     </div>
   </div>
